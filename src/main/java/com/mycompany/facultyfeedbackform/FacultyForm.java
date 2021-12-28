@@ -39,22 +39,23 @@ class MyFrame extends JFrame implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(100,50,800,700);
         frame.setTitle("Faculty FeedBack Form");
+        frame.getContentPane().setBackground(Color.YELLOW);
         Container container = frame.getContentPane();
         container.setLayout(null);
         heading = new JLabel("Faculty FeedBack Form");
         heading.setFont(new Font("Times New Roman", Font.PLAIN, 20));
         heading.setBounds(250,30,250,20);
-        studentName = new JLabel("Name : ",JLabel.LEFT);
-        rollNo = new JLabel("RollNo : ",JLabel.LEFT);
-        subject = new JLabel("Subject : ",JLabel.LEFT);
+        studentName = new JLabel("Enter your Name : ",JLabel.LEFT);
+        rollNo = new JLabel("Enter RollNo : ",JLabel.LEFT);
+        subject = new JLabel("Select Subject : ",JLabel.LEFT);
 
-        q1=new JLabel("1. Teacher is prepared for class : ",JLabel.LEFT);
+        q1=new JLabel("1. Teacher has experience in handling the students of this class : ",JLabel.LEFT);
         q2=new JLabel("2. Teacher knows His/Her Subject : ",JLabel.LEFT);
-        q3=new JLabel("3. Teacher is Organised and neet : ",JLabel.LEFT);
-        q4=new JLabel("4. Teacher Plans class time and Assignments : ",JLabel.LEFT);
-        q5= new JLabel("5. Teacher is flexible : ",JLabel.LEFT);
+        q3=new JLabel("3. Teacher is Qualified Enough for the subject : ",JLabel.LEFT);
+        q4=new JLabel("4. Teacher has good knowlegde in teaching Hindi and English : ",JLabel.LEFT);
+        q5= new JLabel("5. Teacher has good knowledge of the subject : ",JLabel.LEFT);
         q6=new JLabel("6. Teacher is clear about assignments and test : ",JLabel.LEFT);
-
+        
 
         studentName.setFont(new Font("Tahoma", Font.PLAIN, 20));
         studentName.setBounds(10,100,350,20);
@@ -122,7 +123,7 @@ class MyFrame extends JFrame implements ActionListener {
         container.add(ec5);
         container.add(ec6);
 
-        jButton = new JButton("Submit Feedback");
+        jButton = new JButton("Submit");
         jButton.setBounds(300,610,200,40);
         container.add(jButton);
 
@@ -158,7 +159,7 @@ class MyFrame extends JFrame implements ActionListener {
        pat.setString(8,question5_Output);
        pat.setString(9,question6_Output);
        pat.execute();
-       JOptionPane.showMessageDialog(null,"Inserted Successfully");
+       JOptionPane.showMessageDialog(null,"Thank You. Your Response has been recorded.");
         
    }catch(SQLException error){
        JOptionPane.showMessageDialog(null,error);
